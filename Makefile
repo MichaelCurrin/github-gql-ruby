@@ -12,3 +12,7 @@ upgrade:
 token:
 	. .env
 	@echo "ACCESS_TOKEN: ${ACCESS_TOKEN}"
+
+
+run:
+	bundle exec ruby request.rb
