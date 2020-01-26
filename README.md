@@ -42,3 +42,11 @@ Do a query.
 ```sh
 $ bundle exec ruby request.rb
 ```
+
+## Future development
+
+This project could also be refactored to the request script structure be more reusable.
+
+Also rather than using a hardcoded query, this application could read in a queries from files and to allow a choice.
+
+This project is a demo and proof of concept, so it could stay as is.
