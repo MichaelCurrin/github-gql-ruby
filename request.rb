@@ -1,6 +1,6 @@
 # Request application.
 #
-# Do a request to the GraphQL, handle errors and print the response data.
+# Do a request to the GraphQL, handle errors and pretty print the response data.
 require 'json'
 require 'faraday'
 
@@ -16,10 +16,18 @@ HEADERS = {
   'Content-Type': "application/json",
 }
 
+# The name of the current user and basic details for the user's top 3 repos.
 QUERY = '
-  query User {
+  query {
     viewer {
       login
+      repositories(first: 3, ownerAffiliations: OWNER, privacy: PUBLIC,
+                   orderBy: {field: STARGAZERS, direction: DESC}) {
+        nodes {
+          name
+          description
+        }
+      }
     }
   }
 '
