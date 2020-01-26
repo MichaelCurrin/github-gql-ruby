@@ -26,8 +26,7 @@ def do_post(url, payload)
   resp = Faraday.post(
     url,
     payload.to_json,
-    'Content-Type'=> "application/json",
-    'Authorization' => "token #{TOKEN}",
+    HEADERS,
   )
   puts "Status: #{resp.status}"
   if resp.status != 200
