@@ -90,15 +90,24 @@ Status: 200
       "nodes": [
         {
           "name": "uni-cron",
-          "description": "Easy scheduler to tasks run exactly once per day and will retry at intervals until they pass :repeat_one::hourglass_flowing_sand::unicorn:"
+          "description": "Easy scheduler to tasks run exactly once per day and will retry at intervals until they pass :repeat_one::hourglass_flowing_sand::unicorn:",
+          "stargazers": {
+            "totalCount": 3
+          }
         },
         {
           "name": "history-report",
-          "description": "Create page and domain CSV reports from your Chrome browsing history"
+          "description": "Create page and domain CSV reports from your Chrome browsing history",
+          "stargazers": {
+            "totalCount": 2
+          }
         },
         {
           "name": "twitterverse",
-          "description": "Store and report on Twitter conversations, from tweets to trending topics"
+          "description": "Store and report on Twitter conversations, from tweets to trending topics",
+          "stargazers": {
+            "totalCount": 2
+          }
         }
       ]
     }

@@ -16,21 +16,9 @@ HEADERS = {
   'Content-Type': "application/json",
 }
 
-# The name of the current user and basic details for the user's top 3 repos.
-QUERY = '
-  query {
-    viewer {
-      login
-      repositories(first: 3, ownerAffiliations: OWNER, privacy: PUBLIC,
-                   orderBy: {field: STARGAZERS, direction: DESC}) {
-        nodes {
-          name
-          description
-        }
-      }
-    }
-  }
-'
+QUERY_PATH = 'query.gql'
+QUERY = File.open(QUERY_PATH).read
+
 
 def do_post(url, payload)
   puts "Do POST request"
