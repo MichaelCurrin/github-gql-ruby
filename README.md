@@ -69,7 +69,14 @@ Navigate to the project root.
 Set the token in the current terminal.
 
 ```sh
-$ make token
+$ export $(cat .env | xargs)
+```
+
+Check that is set.
+
+```sh
+$ echo $ACCESS_TOKEN
+123456
 ```
 
 Do a query.
