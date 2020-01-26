@@ -45,11 +45,15 @@ $ make upgrade
 
 ### Config
 
-Go to Github account's settings.
+Login to Github.
+
+Go to your account settings then Personal Access Tokens. Or go to this link - [github.com/settings/tokens](https://github.com/settings/tokens).
 
 Create a Github developer token with read access to your details such as your user and repos.
 
-Create an unversioned _dotenv_ file and replace the sample value below with your own token's value.
+Copy the token value. :warning: **Do not share with with anyone and do not put it in version control**
+
+Create a local _dotenv_ file in this project as below but replace the sample value below with your own token's value. This file will be ignored as it appears in the [.gitignore](/.gitignore) file.
 
 e.g.
 
