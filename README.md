@@ -59,6 +59,8 @@ $ echo "ACCESS_TOKEN=123456" > .env
 
 ## Usage
 
+Navigate to the project root.
+
 Set the token in the current terminal.
 
 ```sh
@@ -69,6 +71,35 @@ Do a query.
 
 ```sh
 $ make run
+```
+
+Sample output:
+
+```
+bundle exec ruby request.rb
+Do POST request
+Status: 200
+{
+  "viewer": {
+    "login": "MichaelCurrin",
+    "repositories": {
+      "nodes": [
+        {
+          "name": "uni-cron",
+          "description": "Easy scheduler to tasks run exactly once per day and will retry at intervals until they pass :repeat_one::hourglass_flowing_sand::unicorn:"
+        },
+        {
+          "name": "history-report",
+          "description": "Create page and domain CSV reports from your Chrome browsing history"
+        },
+        {
+          "name": "twitterverse",
+          "description": "Store and report on Twitter conversations, from tweets to trending topics"
+        }
+      ]
+    }
+  }
+}
 ```
 
 ## Future development
