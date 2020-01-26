@@ -8,6 +8,8 @@ For more advanced cases, you can use Ruby gems which are built for GraphQL. They
 - [github/graphql-client](https://github.com/github/graphql-client) - There is a nice example in their docs using the Star Wars API. Note this gem requires Ruby 2.4.4 or higher.
 - [rmosolgo/graphql-ruby](https://github.com/rmosolgo/graphql-ruby)
 
+See also my Github GraphQL project written in Python - [MichaelCurrin/github-graphql-tool](https://github.com/MichaelCurrin/github-graphql-tool).
+
 
 ## Install
 
