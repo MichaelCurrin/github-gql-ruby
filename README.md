@@ -1,4 +1,4 @@
-# Github GraphQL Ruby
+# 💎 Github GraphQL with Ruby
 > Simple proof of concept to request the Github GraphQL API using Ruby
 
 [![Made with Ruby](https://img.shields.io/badge/Made%20with-Ruby-blue.svg)](https://www.ruby-lang.org)
@@ -12,9 +12,11 @@ The logic here is very light - the main script does a POST request using the [Fa
 
 ## 🏘 Other projects
 
+Info on related projects my me and others. Skip ahead if you like.
+
 If you want to get data about your own Github repos and use that for your Jekyll site as dev portfolio, you might find that the [jekyll-github-metadata](https://github.com/jekyll/github-metadata) plugin satisfies your needs.
 
-The Faraday gem used in this project has been adapted for GQL. If you need a gem built for GQL requests, try one of these below. I assume they might do things like schema validation and error handling, but I have not used them before.
+The _Faraday_ gem used in this project has been adapted for GQL. If you need a gem built for GQL requests, try one of these below. I assume they might do things like schema validation and error handling, but I have not used them before.
 
 - [github/graphql-client](https://github.com/github/graphql-client) - There is a nice example in their docs using the Star Wars API. Note this gem requires Ruby `2.4.4` or higher.
 - [rmosolgo/graphql-ruby](https://github.com/rmosolgo/graphql-ruby)
@@ -28,6 +30,7 @@ This project in Ruby is actually a proof of concept as part of my larger goal to
 
 - Github account
 - Github API access token
+- _Ruby_ and _Bundler_
 
 
 ## ⚒ Install
@@ -42,7 +45,7 @@ Install [Bundler](https://bundler.io/) globally using the command below.
 $ gem install bundler
 ```
 
-_Bundler_ is used to manage Ruby gem dependencies in an isolated directory, to preserve your global gems.
+_Bundler_ is used to manage _Ruby_ gem dependencies in an isolated directory, to preserve your global gems.
 
 
 ### Project dependencies.
