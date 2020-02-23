@@ -5,14 +5,24 @@
 [![GitHub tag](https://img.shields.io/github/tag/MichaelCurrin/github-gql-ruby.svg)](https://GitHub.com/MichaelCurrin/github-gql-ruby/tags/)
 [![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/MichaelCurrin/gihhub-gql-ruby/blob/master/LICENSE)
 
-This repo is very light - it does a POST request using the [Faraday](https://lostisland.github.io/faraday/) gem against the [Github GraphQL API](https://developer.github.com/v4/). This could be adjusted to do GQL requests on other APIs.
+This project is intended for anyone who wants to learn how to get data from any GraphQL API, or actually get and use Github data from the API. No knowledge of Ruby, GraphQL or Github API is needed to run this project.
 
-For more advanced cases, you can use Ruby gems which are built for GraphQL. They might handle things like schema validation and error handling but I have not used them.
+The logic here is very light - the main script does a POST request using the [Faraday](https://lostisland.github.io/faraday/) gem against the [Github GraphQL API](https://developer.github.com/v4/). This request could be adjusted to do GQL requests on other APIs or do lookup repos for users other than the authenticating user.
+
+For more advanced API requests, you could use Ruby gems which are built for GraphQL. They might handle things like schema validation and error handling but I have not used them.
 
 - [github/graphql-client](https://github.com/github/graphql-client) - There is a nice example in their docs using the Star Wars API. Note this gem requires Ruby `2.4.4` or higher.
 - [rmosolgo/graphql-ruby](https://github.com/rmosolgo/graphql-ruby)
 
 See also my Github GraphQL project written in Python - [MichaelCurrin/github-graphql-tool](https://github.com/MichaelCurrin/github-graphql-tool).
+
+This project is the first step in a larger goal to fetch and transform Github repo data for myself and use it in Jekyll static site using a plugin (which has to be written in Ruby). Though, that is not in the scope of this repo.
+
+
+## Requirements
+
+- Github account
+- Github API access token
 
 
 ## Install
@@ -46,13 +56,13 @@ $ make upgrade
 
 ### Config
 
-Login to Github.
+Login to your Github account.
 
 Go to your account settings then Personal Access Tokens. Or go to this link - [github.com/settings/tokens](https://github.com/settings/tokens).
 
 Create a Github developer token with read access to your details such as your user and repos.
 
-Copy the token value. :warning: **Do not share with with anyone and do not put it in version control**
+Copy the token value. :warning: **Do not share this with anyone and do not put it in version control**
 
 Create a local _dotenv_ file in this project as below but replace the sample value below with your own token's value. This file will be ignored as it appears in the [.gitignore](/.gitignore) file.
 
@@ -122,6 +132,8 @@ Status: 200
   }
 }
 ```
+
+To get different data, update the query in the `.gql` file and rerun the command above. The output will just be printed as pretty JSON.
 
 ## Future development
 
