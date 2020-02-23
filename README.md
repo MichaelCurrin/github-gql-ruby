@@ -10,7 +10,7 @@ This project is intended for anyone who wants to learn how to get data from any 
 The logic here is very light - the main script does a POST request using the [Faraday](https://lostisland.github.io/faraday/) gem against the [Github GraphQL API](https://developer.github.com/v4/). This project handles this usecase without a lot of code. The request could be adjusted to do GQL requests on other APIs or do lookup repos for users other than the authenticating user.
 
 
-## Other projects
+## 🏘 Other projects
 
 If you want to get data about your own Github repos and use that for your Jekyll site as dev portfolio, you might find that the [jekyll-github-metadata](https://github.com/jekyll/github-metadata) plugin satisfies your needs.
 
@@ -19,18 +19,18 @@ The Faraday gem used in this project has been adapted for GQL. If you need a gem
 - [github/graphql-client](https://github.com/github/graphql-client) - There is a nice example in their docs using the Star Wars API. Note this gem requires Ruby `2.4.4` or higher.
 - [rmosolgo/graphql-ruby](https://github.com/rmosolgo/graphql-ruby)
 
-See also my Github GraphQL project which was written in Python - [MichaelCurrin/github-graphql-tool](https://github.com/MichaelCurrin/github-graphql-tool).
+See also my Github GraphQL project which was written in Python - [MichaelCurrin/github-graphql-tool](https://github.com/MichaelCurrin/github-graphql-tool). Unfortunately Python does not work as part of the flow when building a Jekyll site. So that is why I started this project.
 
-This Ruby project is actually a proof of concept as part of my larger goal to fetch my Github repo data, group repos by label and then use the result in a Jekyll static site. Although Ruby is not my main language, Jekyll plugins are in Ruby, so I had to learn some Ruby in order to pull the data into a Jekyll project.
+This project in Ruby is actually a proof of concept as part of my larger goal to fetch my Github repo data, group repos by label and then use the result in a Jekyll static site. Although Ruby is not my main language, Jekyll plugins are in Ruby, so I had to learn some Ruby in order to pull the data into a Jekyll project.
 
 
-## Requirements
+## 📝 Requirements
 
 - Github account
 - Github API access token
 
 
-## Install
+## ⚒ Install
 
 ### System dependencies
 
@@ -77,7 +77,7 @@ e.g.
 $ echo "ACCESS_TOKEN=123456" > .env
 ```
 
-## Usage
+## 🏋️‍♂️ Usage
 
 Navigate to the project root.
 
@@ -140,7 +140,7 @@ Status: 200
 
 To get different data, update the query in the `.gql` file and rerun the command above. The output will just be printed as pretty JSON.
 
-## Future development
+## 🏗 Future development
 
 This project could also be refactored to the request script structure be more reusable.
 
