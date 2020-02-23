@@ -7,16 +7,21 @@
 
 This project is intended for anyone who wants to learn how to get data from any GraphQL API, or actually get and use Github data from the API. No knowledge of Ruby, GraphQL or Github API is needed to run this project.
 
-The logic here is very light - the main script does a POST request using the [Faraday](https://lostisland.github.io/faraday/) gem against the [Github GraphQL API](https://developer.github.com/v4/). This request could be adjusted to do GQL requests on other APIs or do lookup repos for users other than the authenticating user.
+The logic here is very light - the main script does a POST request using the [Faraday](https://lostisland.github.io/faraday/) gem against the [Github GraphQL API](https://developer.github.com/v4/). This project handles this usecase without a lot of code. The request could be adjusted to do GQL requests on other APIs or do lookup repos for users other than the authenticating user.
 
-For more advanced API requests, you could use Ruby gems which are built for GraphQL. They might handle things like schema validation and error handling but I have not used them.
+
+## Other projects
+
+If you want to get data about your own Github repos and use that for your Jekyll site as dev portfolio, you might find that the [jekyll-github-metadata](https://github.com/jekyll/github-metadata) plugin satisfies your needs.
+
+The Faraday gem used in this project has been adapted for GQL. If you need a gem built for GQL requests, try one of these below. I assume they might do things like schema validation and error handling, but I have not used them before.
 
 - [github/graphql-client](https://github.com/github/graphql-client) - There is a nice example in their docs using the Star Wars API. Note this gem requires Ruby `2.4.4` or higher.
 - [rmosolgo/graphql-ruby](https://github.com/rmosolgo/graphql-ruby)
 
-See also my Github GraphQL project written in Python - [MichaelCurrin/github-graphql-tool](https://github.com/MichaelCurrin/github-graphql-tool).
+See also my Github GraphQL project which was written in Python - [MichaelCurrin/github-graphql-tool](https://github.com/MichaelCurrin/github-graphql-tool).
 
-This project is the first step in a larger goal to fetch and transform Github repo data for myself and use it in Jekyll static site using a plugin (which has to be written in Ruby). Though, that is not in the scope of this repo.
+This Ruby project is actually a proof of concept as part of my larger goal to fetch my Github repo data, group repos by label and then use the result in a Jekyll static site. Although Ruby is not my main language, Jekyll plugins are in Ruby, so I had to learn some Ruby in order to pull the data into a Jekyll project.
 
 
 ## Requirements
