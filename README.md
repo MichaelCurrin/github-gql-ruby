@@ -12,18 +12,26 @@ The logic here is very light - the main script does a POST request using the [Fa
 
 ## 🏘 Other projects
 
-Info on related projects my me and others. Skip ahead if you like.
+Links to projects about GraphQL or using Github data.
 
-If you want to get data about your own Github repos and use that for your Jekyll site as dev portfolio, you might find that the [jekyll-github-metadata](https://github.com/jekyll/github-metadata) plugin satisfies your needs.
+### GraphQL with Ruby
 
 The _Faraday_ gem used in this project has been adapted for GQL. If you need a gem built for GQL requests, try one of these below. I assume they might do things like schema validation and error handling, but I have not used them before.
 
 - [github/graphql-client](https://github.com/github/graphql-client) - There is a nice example in their docs using the Star Wars API. Note this gem requires Ruby `2.4.4` or higher.
 - [rmosolgo/graphql-ruby](https://github.com/rmosolgo/graphql-ruby)
 
+### GraphQL with Python
+
 See also my Github GraphQL project which was written in Python - [MichaelCurrin/github-graphql-tool](https://github.com/MichaelCurrin/github-graphql-tool). Unfortunately Python does not work as part of the flow when building a Jekyll site. So that is why I started this project.
 
-This project in Ruby is actually a proof of concept as part of my larger goal to fetch my Github repo data, group repos by label and then use the result in a Jekyll static site. Although Ruby is not my main language, Jekyll plugins are in Ruby, so I had to learn some Ruby in order to pull the data into a Jekyll project.
+### Static sites
+
+If you want to get data about your own Github repos and use that for your Jekyll site as dev portfolio, you might find that the [jekyll-github-metadata](https://github.com/jekyll/github-metadata) plugin satisfies your needs. It might actuall use the REST API.
+
+Github's quickstart dev portfolio is a good example of using that data - [github/personal-website](https://github.com/github/personal-website).
+
+This project in Ruby is actually a proof of concept as part of my larger goal to fetch my Github repo data, group repos by label and then use the result in a Jekyll static site - [MichaelCurrin/my-github-projects](https://github.com/MichaelCurrin/my-github-projects). Although Ruby is not my main language, Jekyll plugins are in Ruby, so I had to learn some Ruby in order to pull the data into a Jekyll project.
 
 
 ## 📝 Requirements
