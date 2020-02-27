@@ -10,4 +10,4 @@ upgrade:
 
 
 run:
-	bundle exec ruby request.rb
+	bundle exec ruby fetch_and_print.rb
