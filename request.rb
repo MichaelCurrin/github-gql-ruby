@@ -1,6 +1,6 @@
 # Request application.
 #
-# Do a request to the GraphQL, handle errors and pretty print the response data.
+# Do a request to the Github GraphQL API, handle errors and pretty print the parsed response data.
 #
 # self was used in the module as per this page.
 #   https://stackoverflow.com/questions/322470/can-i-invoke-an-instance-method-on-a-ruby-module-without-including-it
@@ -21,7 +21,6 @@ module Request
 
   QUERY_PATH = 'query.gql'
   QUERY = File.open(QUERY_PATH).read
-
 
   def self.do_post(url, payload)
     puts "Do POST request"
