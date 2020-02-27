@@ -22,7 +22,7 @@ module Request
   QUERY_PATH = 'query.gql'
   QUERY = File.open(QUERY_PATH).read
 
-  def self.do_post(url, payload)
+  def self.post(url, payload)
     puts "Do POST request"
 
     resp = Faraday.post(
@@ -39,9 +39,9 @@ module Request
     resp_data = JSON.parse resp.body
   end
 
-  def self.query_gql()
+  def self.query()
     query_payload = {'query': QUERY}
-    results = do_post API_URL, query_payload
+    results = post API_URL, query_payload
 
     errors = results['errors']
     if errors
@@ -54,7 +54,7 @@ module Request
   end
 
   def self.test
-    data = self.query_gql()
+    data = self.query()
     puts JSON.pretty_generate data
   end
 end
