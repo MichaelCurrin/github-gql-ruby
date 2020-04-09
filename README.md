@@ -143,16 +143,31 @@ This project is a demo and proof of concept, so it could stay as is.
 
 Links to projects about GraphQL or using Github data.
 
-### GraphQL with Ruby
+### Ruby
 
 The _Faraday_ gem used in this project has been adapted for GQL. If you need a gem built for GQL requests, try one of these below. I assume they might do things like schema validation and error handling, but I have not used them before.
 
-- [github/graphql-client](https://github.com/github/graphql-client) - There is a nice example in their docs using the Star Wars API. Note this gem requires Ruby `2.4.4` or higher.
+- GraphQL client
+    - [k0kubun/github_api-v4-client](https://github.com/k0kubun/github_api-v4-client)
+        - A client for Github API V4 (GraphQL).
+    - [github/graphql-client](https://github.com/github/graphql-client) 
+        - > A Ruby library for declaring, composing and executing GraphQL queries 
+        - A generic client for GraphQL. There is a nice example in their docs using the Star Wars API. It can be adapted for Github API.
+      - Note this gem requires Ruby `2.4.4` or higher.
+- GraphQL server
 - [rmosolgo/graphql-ruby](https://github.com/rmosolgo/graphql-ruby)
+    - > Ruby implementation of GraphQL
+    - This seems to be a server.
+- [ruby_graphql_api](https://github.com/michaeltelford/ruby_graphql_api)
+    - GraphQL server built on Ruby.
+- Github REST API client
+    - [octokit/octokit.rb](https://github.com/octokit/octokit.rb)
+        - Toolkit for Ruby for Github API. This uses the REST API.
 
-### GraphQL with Python
+### Python
 
 - [MichaelCurrin/github-graphql-tool](https://github.com/MichaelCurrin/github-graphql-tool) - my Github GraphQL project which was written in Python. Unfortunately Python does not work as part of the flow when building a Jekyll site. So that is why I started this project.
+
 
 ### Static sites
 
