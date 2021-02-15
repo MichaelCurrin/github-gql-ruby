@@ -1,19 +1,19 @@
-# 💎 Github GraphQL with Ruby
-> Simple proof of concept to request the Github GraphQL API using Ruby
+# GitHub GQL Ruby
+> Simple proof of concept to request the GitHub GraphQL API using Ruby
 
 [![Made with Ruby](https://img.shields.io/badge/Made%20with-Ruby-blue.svg)](https://www.ruby-lang.org)
 [![GitHub tag](https://img.shields.io/github/tag/MichaelCurrin/github-gql-ruby.svg)](https://GitHub.com/MichaelCurrin/github-gql-ruby/tags/)
 [![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/MichaelCurrin/gihhub-gql-ruby/blob/master/LICENSE)
 
-This project was built as a step towards getting Github GraphQL data into a static site. Since that was achieved, this project serves as a reference on how that works in a simple form and as a reference for anyone who wants to learn how to get data from Github or any GraphQL API using Ruby.
+This project was built as a step towards getting GitHub GraphQL data into a static site. Since that was achieved, this project serves as a reference on how that works in a simple form and as a reference for anyone who wants to learn how to get data from Github or any GraphQL API using Ruby.
 
 The logic here is very light - the main script does a POST request using the [Faraday](https://lostisland.github.io/faraday/) gem against the [Github GraphQL API](https://developer.github.com/v4/). This project handles this usecase without a lot of code. The request could be adjusted to do GQL requests on other APIs or do lookup repos for users other than the authenticating user.
 
 
 ## 📝 Requirements
 
-- Github account
-- Github API access token
+- GitHub account
+- GitHub API access token
 - _Ruby_
 - _Bundler_
 
@@ -51,7 +51,7 @@ $ make upgrade
 
 ### Config
 
-Login to your Github account.
+Login to your GitHHub account.
 
 Go to your account settings then Personal Access Tokens. Or go to this link - [github.com/settings/tokens](https://github.com/settings/tokens).
 
