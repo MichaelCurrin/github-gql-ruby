@@ -1,16 +1,16 @@
-# GitHub GQL Ruby
+# GitHub GQL Ruby 💎
 > Simple proof of concept to request the GitHub GraphQL API using Ruby
 
 [![Made with Ruby](https://img.shields.io/badge/Made%20with-Ruby-blue.svg)](https://www.ruby-lang.org)
 [![GitHub tag](https://img.shields.io/github/tag/MichaelCurrin/github-gql-ruby.svg)](https://GitHub.com/MichaelCurrin/github-gql-ruby/tags/)
-[![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/MichaelCurrin/gihhub-gql-ruby/blob/master/LICENSE)
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](#license)
 
 This project was built as a step towards getting GitHub GraphQL data into a static site. Since that was achieved, this project serves as a reference on how that works in a simple form and as a reference for anyone who wants to learn how to get data from Github or any GraphQL API using Ruby.
 
 The logic here is very light - the main script does a POST request using the [Faraday](https://lostisland.github.io/faraday/) gem against the [Github GraphQL API](https://developer.github.com/v4/). This project handles this usecase without a lot of code. The request could be adjusted to do GQL requests on other APIs or do lookup repos for users other than the authenticating user.
 
 
-## 📝 Requirements
+## Requirements 📝
 
 - GitHub account
 - GitHub API access token
@@ -20,7 +20,7 @@ The logic here is very light - the main script does a POST request using the [Fa
 No prior knowledge of Ruby, GraphQL or Github API is needed to actually run this project.
 
 
-## ⚒ Install
+## Install ⚒
 
 ### System dependencies
 
@@ -35,7 +35,7 @@ $ gem install bundler
 _Bundler_ is used to manage _Ruby_ gem dependencies in an isolated directory, to preserve your global gems.
 
 
-### Project dependencies.
+### Project dependencies
 
 Install gems.
 
@@ -67,7 +67,7 @@ e.g.
 $ echo "ACCESS_TOKEN=123456" > .env
 ```
 
-## 🏋️‍♂️ Usage
+## Usage 🏋️‍♂️
 
 Navigate to the project root.
 
@@ -131,7 +131,7 @@ Status: 200
 To get different data, update the query in the `.gql` file and rerun the command above. The output will just be printed as pretty JSON.
 
 
-## 🏗 Future development
+## Future development 🏗 ⏱
 
 This project could also be refactored to the request script structure be more reusable.
 
@@ -140,7 +140,7 @@ Also rather than using a hardcoded query, this application could read in a queri
 This project is a demo and proof of concept, so it could stay as is.
 
 
-## 🏘 Related projects
+## Related projects 🏘
 
 Links to projects about GraphQL or using Github data.
 
@@ -165,7 +165,7 @@ The _Faraday_ gem used in this project has been adapted for GQL. If you need a g
         - [octokit/octokit.rb](https://github.com/octokit/octokit.rb)
             - Toolkit for Ruby for Github API. This uses the REST API.
 
-### Python
+### Python 🐍
 
 - [MichaelCurrin/github-graphql-tool](https://github.com/MichaelCurrin/github-graphql-tool) - my Github GraphQL project which was written in Python. Unfortunately Python does not work as part of the flow when building a Jekyll site. So that is why I started this project.
 
@@ -176,3 +176,7 @@ The _Faraday_ gem used in this project has been adapted for GQL. If you need a g
 -  [github/personal-website](https://github.com/github/personal-website) - Github's quickstart dev portfolio is a good example of using Github data in a static site through the `jekyll-github-metadata` plugin.
 - [MichaelCurrin/my-github-projects](https://github.com/MichaelCurrin/my-github-projects) - A project to fetch my Github repo data, group repos by label and then use the result in a Jekyll static site as dev portfolio. This Github GQL Ruby was the proof of concept I did before doing the dev portfolio. Although Ruby is not my main language, Jekyll plugins are in Ruby, so I had to learn some Ruby in order to pull the data into a Jekyll project.
 
+
+## License
+
+Released under [MIT](/LICENSE) by [@MichaelCurrin](https://github.com/MichaelCurrin).
