@@ -1,4 +1,4 @@
-# GitHub GQL Ruby 💎
+# GitHub GQL Ruby 👨‍💻 🕸 💎
 > Simple proof of concept to request the GitHub GraphQL API using Ruby
 
 [![Made with Ruby](https://img.shields.io/badge/Made%20with-Ruby-blue.svg)](https://www.ruby-lang.org)
