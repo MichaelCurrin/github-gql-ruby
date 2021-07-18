@@ -1,18 +1,31 @@
-# The name of the current user and basic details for the user's top 3 repos.
-query PopularRepos {
+# Public repos owned by the current user along with metadata including topics.
+query ReposWithTopics {
     viewer {
         login
-        repositories(
-            first: 3
-            ownerAffiliations: OWNER
-            privacy: PUBLIC
-            orderBy: { field: STARGAZERS, direction: DESC }
-        ) {
+        repositories(first: 100, ownerAffiliations: OWNER, privacy: PUBLIC, orderBy: { field: NAME, direction: ASC }) {
             nodes {
                 name
-                description
+                # Dates
+                createdAt
+                updatedAt
+                pushedAt
+                # Counts
                 stargazers {
                     totalCount
+                }
+                forkCount
+                # Topic labels.
+                repositoryTopics(first: 100) {
+                    nodes {
+                        topic {
+                            name
+                            stargazers {
+                                totalCount
+                            }
+                            viewerHasStarred
+                        }
+                        url
+                    }
                 }
             }
         }
